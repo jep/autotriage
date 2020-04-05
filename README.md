@@ -1,27 +1,14 @@
-<a  href="https://www.twilio.com">
-<img  src="https://static0.twilio.com/marketing/bundles/marketing/img/logos/wordmark-red.svg"  alt="Twilio"  width="250"  />
-</a>
- 
-# Voice-Powered IVR Chatbot with Autopilot
-
-[![Actions Status](https://github.com/twilio-labs/sample-autopilot-voice-ivr/workflows/Node%20CI/badge.svg)](https://github.com/twilio-labs/sample-autopilot-voice-ivr/actions)
+# AutoTriage - connect to critical patients faster
 
 ## About
+During the initial spread of COVID-19 there was a substantial demand for testing. However, due to limited testing capacity the CDC advised only patients that had travel history involving specific countries, or presented a particular combination of symptoms, could receive a 'referral' to be tested. Patients who did not meet those parameters were considered 'stable' and told to self-isolate, get rest, and contact the doctor if symptoms progress or worsen. 
 
-Interactive Voice Response or IVR is an automated telephony system that interacts with human callers through the use of voice and touch-tone keypad selections (DTMF tones).
+'AutoTriage' is web application that leverages the [Twilio Autopilot](https://www.twilio.com/docs/autopilot) API to screen human callers, using a list of doctor-configurable rules to determine which patients need to be connected to a medical professional and which patients are stable enough to exercise self-care.
 
-This application shows how to build an IVR application using [Twilio Autopilot](https://www.twilio.com/docs/autopilot). Autopilot is a conversational AI platform to build, train, and deploy artificially intelligent applications that can interact with users over multiple channels.
-
-
-Implementations in other languages:
-
-| .NET | Java | Python | PHP | Ruby |
-| :--- | :--- | :----- | :-- | :--- |
-| TBD  | TBD  | TBD    | TBD | TBD  |
+This type of system is perfect for small medical practices who may not have the resources to field multiple calls from patients, or whose staff is required to work from home. During the current pandemic, many local governments set up telephone helplines where citizens could call and be connected to a qualified nurse to have their COVID-related questions answered. There were still large hold times on some of these lines, something that would be less likely to occur with an app like AutoTriage.
 
 ### How it works
-
-This is a very simple application that provides a setup page where the user can enter all configurable values for the IVR tree. When the setup form is submitted it will run an async script to create all tasks for the IVR workflow in an [Autopilot Assistant](https://www.twilio.com/docs/autopilot/api/assistant). 
+The front-end is a simple web-app that allows
 
 The application also provides a couple of endpoints to handle webhooks and return dynamic tasks for the IVR.
 
@@ -30,9 +17,9 @@ The application also provides a couple of endpoints to handle webhooks and retur
 - Node.js web server using [Express.js](https://npm.im/express)
 - User interface to setup IVR responses using [Twilio Helper Library](https://www.twilio.com/docs/libraries/node).
 - Small JSON database using lowdb.
-- Unit tests using [`mocha`](https://npm.im/mocha) and [`chai`](https://npm.im/chai)
-- [Automated CI testing using GitHub Actions](/.github/workflows/nodejs.yml)
-- One click deploy buttons for Heroku, Glitch and now.sh
+- ~~Unit tests using [`mocha`](https://npm.im/mocha) and [`chai`](https://npm.im/chai)
+- ~~[Automated CI testing using GitHub Actions](/.github/workflows/nodejs.yml)
+- ~~One click deploy buttons for Heroku, Glitch and now.sh
 
 ## Set up
 
